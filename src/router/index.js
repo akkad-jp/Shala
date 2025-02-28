@@ -1,9 +1,8 @@
 import { createMemoryHistory, createRouter } from "vue-router";
 
-import IndexPage from '@/pages/IndexPage.vue'
-
 const routes = [
-  { path: '/', component: IndexPage },
+  { path: '/', component: import ('@/pages/IndexPage.vue') },
+  { path: '/test', component: import ('@/pages/TestPage.vue') },
 ]
 
 const router = createRouter({
