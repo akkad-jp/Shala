@@ -16,14 +16,12 @@ cd Shala
 ### Docker コンテナを構築する
 ```
 docker compose build
+```
+
+### Docker コンテナを起動する
+```
 sh/up
 ```
-
-### JavaScript の依存パッケージをインストールする
-```
-sh/exec npm ci
-```
-
 
 ## スタティックなHTML の編集・動作確認
 
@@ -56,7 +54,7 @@ sh/serve_html
 
 ## ブラウザで動作確認
 
-http://localhost/html/hoge.html でページが表示されるはず！
+http://localhost:5173/html/hoge.html でページが表示されるはず！
 
 
 ## Vue.js の編集・動作確認
@@ -88,7 +86,7 @@ src/router/index.js
 
 routes の配列にページ情報を追記する。
 
-例）URL が'http://localhost/hoge' でアクセスできるページを登録する場合
+例）URL が'http://localhost:5173/hoge' でアクセスできるページを登録する場合
 ```
 const routes = [
   // ...
@@ -96,15 +94,6 @@ const routes = [
 ]
 ```
 
-## Vue.js 用のCSS 変換モジュールを起動する
-
-```
-sh/serve
-```
-
-(上記コマンド実行中は、プロンプトが帰ってこない。終了する場合は[control] + [C])
-(実行中は、HTML ファイルを編集・保存すると自動でCSS 変換処理が行わて、ブラウザの表示に即反映される)
-
 ## ブラウザで動作確認
 
-http://localhost/hoge でページが表示されるはず！
+http://localhost:5173/hoge でページが表示されるはず！
